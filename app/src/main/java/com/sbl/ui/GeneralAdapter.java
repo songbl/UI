@@ -3,6 +3,7 @@ package com.sbl.ui;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -44,6 +45,8 @@ public class GeneralAdapter extends RecyclerView.Adapter<GeneralAdapter.MyViewHo
     //返回Item的数量
     @Override
     public int getItemCount() {
+
+        Log.e("songbl","==="+datas.size());
         return datas.size();
     }
 
@@ -54,6 +57,7 @@ public class GeneralAdapter extends RecyclerView.Adapter<GeneralAdapter.MyViewHo
         public MyViewHolder(View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.text);
+            Log.e("songbl","==="+textView.getText());
         }
     }
 }
